@@ -1,11 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Manager</title>
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <button id="addTicketButton">Добавить тикет</button>
+
+      <div id="ticketsList" class="tickets-table"></div>
+
+      <!-- Модальное окно добавления и редактирования тикета -->
+      <div id="ticketModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <p id="modalTitle">Добавить тикет</p>
+          <form id="ticketForm">
+            <div class="discription">
+              <label for="ticketName">Краткое описание</label>
+              <input type="text" id="ticketName" name="name" required />
+            </div>
+            <div class="discription-full">
+              <label for="ticketDescription">Подробное описание</label>
+              <textarea id="ticketDescription" name="description"></textarea>
+            </div>
+            <div class="modal-buttons">
+              <button type="button" id="cancelButton">Отмена</button>
+              <button type="submit" id="submitButton">Ok</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Модальное окно подтверждения удаления -->
+      <div id="deleteModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <p>Удалить тикет</p>
+          <p>Вы уверены, что хотите удалить тикет? Это действие необратимо.</p>
+          <div class="modal-buttons">
+            <button type="button" id="cancelDeleteButton">Отмена</button>
+            <button type="button" id="confirmDeleteButton">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="./js/frontend.js"></script> -->
+  </body>
 </html>
