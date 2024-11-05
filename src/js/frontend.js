@@ -1,4 +1,4 @@
-const API_URL = "https://httpserver-1-74d4.onrender.com/tickets";
+const API_URL = "https://httpserver-1-74d4.onrender.com/";
 let selectedTicketId = null;
 
 document.getElementById("addTicketButton").addEventListener("click", () => {
