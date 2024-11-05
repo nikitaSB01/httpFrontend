@@ -31,6 +31,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html", // Шаблон для HTML-файла
+      favicon: "./src/assets/icons8-favicon-48.png", // Путь к фавиконке
       filename: "index.html",
     }),
     new MiniCssExtractPlugin({
